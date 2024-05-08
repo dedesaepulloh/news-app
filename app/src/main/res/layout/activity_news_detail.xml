@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:overScrollMode="never"
+    tools:context=".presentation.view.NewsDetailActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cv_news_image"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="30dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="0dp"
+            app:layout_constraintDimensionRatio="16:9"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/img_news"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                tools:ignore="ContentDescription"
+                tools:src="@drawable/ic_placeholder" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:id="@+id/tv_news_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:background="@drawable/bg_rounded_blue_ocean"
+            android:paddingHorizontal="6dp"
+            android:paddingVertical="2dp"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@id/cv_news_image"
+            app:layout_constraintTop_toBottomOf="@+id/cv_news_image"
+            tools:text="6 Mei 2024" />
+
+        <TextView
+            android:id="@+id/tv_news_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:textColor="@color/blue_ocean"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@id/cv_news_image"
+            app:layout_constraintStart_toStartOf="@id/cv_news_image"
+            app:layout_constraintTop_toBottomOf="@+id/tv_news_date"
+            tools:text="Lorem" />
+
+        <TextView
+            android:id="@+id/tv_author_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/label_author"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@id/tv_news_title"
+            app:layout_constraintTop_toBottomOf="@+id/tv_news_title" />
+
+        <TextView
+            android:id="@+id/tv_author"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:textColor="@color/blue_ocean"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_author_title"
+            app:layout_constraintStart_toEndOf="@+id/tv_author_title"
+            app:layout_constraintTop_toTopOf="@+id/tv_author_title"
+            tools:text="Dede Saepulloh" />
+
+        <TextView
+            android:id="@+id/tv_source_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:text="@string/label_source"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@id/tv_author_title"
+            app:layout_constraintTop_toBottomOf="@+id/tv_author_title" />
+
+        <TextView
+            android:id="@+id/tv_source"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:textColor="@color/blue_ocean"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_source_title"
+            app:layout_constraintStart_toEndOf="@+id/tv_source_title"
+            app:layout_constraintTop_toTopOf="@+id/tv_source_title"
+            tools:text="AFG" />
+
+        <TextView
+            android:id="@+id/tv_news_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="16dp"
+            android:justificationMode="inter_word"
+            android:lineSpacingExtra="8sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_source_title"
+            tools:targetApi="o"
+            tools:text="content" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

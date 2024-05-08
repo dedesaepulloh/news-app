@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">TribunNews</string>
+    <string name="label_author">Penulis :</string>
+    <string name="label_source">Sumber :</string>
+    <string name="label_data_not_found">Data Tidak Ditemukan</string>
+    <string name="label_detail">Detail</string>
+</resources>
